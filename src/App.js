@@ -3,6 +3,11 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [text, setText] = useState("Hello");
+
+  function handleChange(e) {
+    setText(e.target.value);
+  }
 
   function resetCount() {
     setCount(count * 0);
@@ -29,6 +34,15 @@ function App() {
         onClick={resetCount}>
         RESET
       </button>
+      <h1 className="text-3xl text-white mt-2"> Examples 02</h1>
+      <div className="flex flex-row mt-4">
+        <input
+          maxLength="26"
+          onChange={handleChange}
+          className="outline-none px-1"
+          value={text}></input>
+      </div>
+      <p className="text-xl text-white">You Typed: {text}</p>
     </div>
   );
 }
