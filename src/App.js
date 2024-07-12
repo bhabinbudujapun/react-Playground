@@ -21,6 +21,9 @@ function App() {
     setIsChecked(e.target.checked);
   }
 
+  const [name, setName] = useState("Bhabin");
+  const [age, setAge] = useState(25);
+
   return (
     <div className="mt-3 ml-2">
       <h1 className="text-3xl text-white mt-2"> Examples 01</h1>
@@ -32,12 +35,14 @@ function App() {
           BUTTON
         </button>
         <p className="text-xl text-white">{count} times</p>
+
+        <button
+          className="text-gray-600 rounded-sm font-bold bg-green-200 px-4 py-1"
+          onClick={resetCount}>
+          RESET
+        </button>
       </div>
-      <button
-        className="text-gray-600 rounded-sm font-bold bg-green-200 px-4 py-1"
-        onClick={resetCount}>
-        RESET
-      </button>
+
       <h1 className="text-3xl text-white mt-2"> Examples 02</h1>
       <div className="flex flex-row mt-4">
         <input
@@ -47,6 +52,7 @@ function App() {
           value={text}></input>
       </div>
       <p className="text-xl text-white">You Typed: {text}</p>
+
       <h1 className="text-3xl text-white mt-2"> Examples 03</h1>
       <div className="flex flex-row mt-4">
         <label className="text-xl text-white">
@@ -57,6 +63,30 @@ function App() {
       <p className="text-xl text-white">
         You {isChecked ? "liked" : "do not liked"} this.
       </p>
+
+      <h1 className="text-3xl text-white mt-2"> Examples 04</h1>
+      <div className="flex flex-row mt-4">
+        <input
+          type="text"
+          className="outline-none px-1"
+          maxLength="26"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <p className="text-xl text-white">
+        Hello, {name}. Your are {age}
+      </p>
+      <button
+        className="text-gray-600 rounded-sm font-bold bg-green-200 px-4 py-1"
+        onClick={() => setAge(age + 1)}>
+        increase age
+      </button>
+      <button
+        className="text-gray-600 rounded-sm font-bold bg-green-200 px-4 py-1 ml-2"
+        onClick={() => setAge(age - age + 25)}>
+        reset age
+      </button>
     </div>
   );
 }
