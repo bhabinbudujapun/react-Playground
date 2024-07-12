@@ -3,18 +3,22 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [text, setText] = useState("Hello");
-
   function handleChange(e) {
     setText(e.target.value);
   }
 
+  const [text, setText] = useState("Hello");
   function resetCount() {
     setCount(count * 0);
   }
 
   function handleCount() {
     setCount(count + 1);
+  }
+
+  const [isChecked, setIsChecked] = useState(false);
+  function handleChecked(e) {
+    setIsChecked(e.target.checked);
   }
 
   return (
@@ -43,6 +47,16 @@ function App() {
           value={text}></input>
       </div>
       <p className="text-xl text-white">You Typed: {text}</p>
+      <h1 className="text-3xl text-white mt-2"> Examples 03</h1>
+      <div className="flex flex-row mt-4">
+        <label className="text-xl text-white">
+          <input type="checkbox" onChange={handleChecked} className="mr-1" />I
+          liked this
+        </label>
+      </div>
+      <p className="text-xl text-white">
+        You {isChecked ? "liked" : "do not liked"} this.
+      </p>
     </div>
   );
 }
