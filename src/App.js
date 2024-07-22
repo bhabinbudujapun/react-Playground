@@ -3,6 +3,7 @@ import Example01 from "./examples/Example01";
 import Example02 from "./examples/Example02";
 import Example03 from "./examples/Example03";
 import Example04 from "./examples/Example04";
+import UserInfo from "./userdetails/UserInfo";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Example02 />
       <Example03 />
       <Example04 />
+      <UserInfo />
     </div>
   );
 }
