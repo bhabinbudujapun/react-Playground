@@ -7,7 +7,7 @@ import UserInfo from "./userdetails/UserInfo";
 
 function App() {
   return (
-    <div className="mt-3 ml-2 flex flex-col justify-center items-center h-screen gap-2">
+    <div className="mt-3 ml-2 flex flex-col justify-center items-center gap-2">
       <Example01 />
       <Example02 />
       <Example03 />
