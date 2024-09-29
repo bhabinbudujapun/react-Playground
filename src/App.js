@@ -1,4 +1,3 @@
-import "./App.css";
 import Example01 from "./examples/Example01";
 import Example02 from "./examples/Example02";
 import Example03 from "./examples/Example03";
